@@ -4140,8 +4140,10 @@ export type SessionEventsResponses = {
     /**
      * SSE event stream
      */
-    200: unknown;
+    200: MessageEvent;
 };
+
+export type SessionEventsResponse = SessionEventsResponses[keyof SessionEventsResponses];
 
 export type SessionReplyData = {
     body: SessionReplyRequest;
