@@ -3,6 +3,7 @@
 goose is an AI agent framework in Rust with CLI and Electron desktop interfaces.
 
 ## Setup
+
 ```bash
 source bin/activate-hermit
 cargo build
@@ -11,6 +12,7 @@ cargo build
 ## Commands
 
 ### Build
+
 ```bash
 cargo build                   # debug
 cargo build --release         # release  
@@ -18,6 +20,7 @@ just release-binary           # release + openapi
 ```
 
 ### Test
+
 ```bash
 cargo test                   # all tests
 cargo test -p goose          # specific crate
@@ -26,12 +29,14 @@ just record-mcp-tests        # record MCP
 ```
 
 ### Lint/Format
+
 ```bash
 cargo fmt
 cargo clippy --all-targets -- -D warnings
 ```
 
 ### UI
+
 ```bash
 just generate-openapi        # after server changes
 just run-ui                  # start desktop
@@ -39,6 +44,7 @@ cd ui/desktop && pnpm test   # test UI
 ```
 
 ## Structure
+
 ```
 crates/
 ├── goose              # core logic
@@ -55,6 +61,7 @@ ui/desktop/            # Electron app
 ```
 
 ## Development Loop
+
 ```bash
 # 1. source bin/activate-hermit
 # 2. Make changes
@@ -94,6 +101,7 @@ Never: Merge without running clippy
 Never: Comment self-evident operations (`// Initialize`, `// Return result`), getters/setters, constructors, or standard Rust idioms
 
 ## Entry Points
+
 - CLI: crates/goose-cli/src/main.rs
 - Server: crates/goose-server/src/main.rs
 - UI: ui/desktop/src/main.ts
